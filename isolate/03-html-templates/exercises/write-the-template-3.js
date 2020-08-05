@@ -8,15 +8,14 @@
  */
 const renderEvens = (numbers, id) => {
   let listItems = '';
-  for (const _ of _) {
-    if (_) {
-      listItems += _;
+  for (const num of numbers) {
+    if (num %2 === 0) {
+      listItems += `<li>${num}</li>`;
     }
   }
-  const list = `<ul id="${_}">${_}</ul>`;
+  const list = `<ul id="${id}">${listItems}</ul>`;
   return list;
 };
-
 
 
 const _1_emptyArray = renderEvens([], 'empty');
