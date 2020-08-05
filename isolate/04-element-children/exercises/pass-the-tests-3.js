@@ -19,10 +19,14 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 //  you will need to access and update each <td> element
-
-
-
-
+let tbl = divEl.children[0],
+  bdy = tbl.children[0],
+  tr1 = bdy.children[0],
+  tr2 = bdy.children[1];
+  tr1.children[0].innerHTML = 'a';
+  tr1.children[1].innerHTML = 'b';
+  tr2.children[0].innerHTML = 'c';
+  tr2.children[1].innerHTML = 'd';
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
