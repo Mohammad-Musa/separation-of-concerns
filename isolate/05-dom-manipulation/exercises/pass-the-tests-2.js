@@ -10,11 +10,18 @@ ulEl.innerHTML = `
 console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
+const pEl = ulEl.children[1];
+ulEl.removeChild(pEl);
 
+const liEl0 = ulEl.children[0];
+liEl0.innerHTML = 'toad';
+const liEl1 = ulEl.children[1];
+const liEl2 = ulEl.children[2];
+liEl2.innerHTML = 'frog';
+ulEl.insertBefore(liEl2, liEl1);
 
-
-
-
+console.log(ulEl.children)
+console.log(ulEl.innerHTML)
 // --- --- --- --- --- ---
 
 console.log(ulEl.nodeName + ' (after)', ulEl.cloneNode(true));

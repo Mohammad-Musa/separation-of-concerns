@@ -14,8 +14,20 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 //  remove the <h1>
 //  append something to the end
 
+const navEl = document.createElement('NAV');
+const pEl = divEl.children[0];
+divEl.insertBefore(navEl, pEl);
 
+const h1El = divEl.children[3];
+const sectionEl =divEl.children[2];
 
+const h2El = document.createElement('h2');
+divEl.appendChild(h2El);
+
+divEl.removeChild(h1El);
+
+divEl.insertBefore(h2El, pEl);
+divEl.insertBefore(sectionEl, pEl);
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName + ' (after)', divEl.cloneNode(true));
